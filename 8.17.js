@@ -2879,7 +2879,18 @@ async function quitPsychoJS(message, isCompleted) {
   
   
   
-  
+ fetch("https://pipe.jspsych.org/api/data/", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+          Accept: "*/*",
+      },
+      body: JSON.stringify({
+          experimentID: "HR3gCXEAzcE6",
+          filename: "UNIQUE_FILENAME.csv",
+          data: dataAsString,
+      }),
+  });
   
   
   
